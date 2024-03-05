@@ -1,0 +1,35 @@
+/*
+This is an example of what a css external style sheet looks like. This is what is make after you copy and paste
+css code. Find some good bootstrap code for your website AFTER you have decided what you want it to look like, then
+create style sheets for the code to make it look less bootstrappy.
+ */
+
+/* This rule allows me to add a box around the top of the webpage to act like a make-shift
+navigation page */
+div.border p{
+    color: #6cb5cc;
+    border: 2px solid #bc7c6c;
+    border-radius: 5px;
+    width: 300px;
+    padding: 5px;
+}
+
+div.header h2{
+    color: #253057;
+    font-style: italic;
+}
+
+/* This rule was for the rest of the paragraphs to be the same color throughout the webpage */
+div.regular p{
+    color: #6cb5cc;
+    font-size: 1.1em;
+}
+/* This rule allows me to create borders on my tables and if I have more tables in the future, I will make sure
+it has the same border color around it */
+div table, td, th{
+    border-style: solid;
+    border-width: 3px;
+    border-color: #bc7c6c;
+    border-collapse: collapse;
+}
+
