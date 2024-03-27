@@ -3,39 +3,39 @@
 
 {% block contact_content %}
     <div class = "container">
-    <h1>Contact Form </h1>
-    {% if form_submitted %}
-    <div class="col-12">
-        <h2> Thank you for completing the form! </h2>
+        <h1>Contact Form </h1>
+        {% if form_submitted %}
+        <div class="col-12">
+            <h2> Thank you for completing the form! </h2>
+        </div>
+        <div class="col-md-6">
+            <p> First Name: </p>
+        </div>
+        <div class="col-md-6">
+            <p>{{ request.form.get('first_name') }} </p>
+        </div>
+        <div class="col-md-6">
+            <p> Last Name: </p>
+        </div>
+        <div class="col-md-6">
+            <p>{{ request.form.get('last_name') }} </p>
+        </div>
+        <div class="col-md-6">
+            <p> Email: </p>
+        </div>
+        <div class="col-md-6">
+            <p>{{ request.form.get('email') }} </p>
+        </div>
+        <div class="col-md-6">
+            <p> Phone number: </p>
+        </div>
+        <div class="col-md-6">
+            <p>{{ request.form.get('phone-number') }} </p>
+        </div>
+        <p><a href="{{ url_for('contact') }}"> Complete form again</a></p>
     </div>
-    <div class="col-md-6">
-        <p> First Name: </p>
-    </div>
-    <div class="col-md-6">
-        <p>{{ request.form.get('first_name') }} </p>
-    </div>
-    <div class="col-md-6">
-        <p> Last Name: </p>
-    </div>
-    <div class="col-md-6">
-        <p>{{ request.form.get('last_name') }} </p>
-    </div>
-    <div class="col-md-6">
-        <p> Email: </p>
-    </div>
-    <div class="col-md-6">
-        <p>{{ request.form.get('email') }} </p>
-    </div>
-    <div class="col-md-6">
-        <p> Phone number: </p>
-    </div>
-    <div class="col-md-6">
-        <p>{{ request.form.get('phone-number') }} </p>
-    </div>
-    <p><a href="{{ url_for('contact') }}"> Complete form again</a></p>
-
     {% else %}
-<form class="row g-3" action="{{ url_for('contact') }}" method="post">
+<div class="row g-3" action="{{ url_for('contact') }}" method="post">
     <div class="col-md-6">
         <label for="first_name" class="form-label">First Name</label>
         <input type="text" class="form-control" id="first_name" name="first_name" placeholder="Enter your first name">
@@ -55,7 +55,7 @@
     <div class="col-12">
         <button type= "submit" class="btn btn-primary"> Submit Form</button>
     </div>
-</form>
+</div>
 {% endif %}
 
 <!-- Bootstrap Bundle with Popper -->
