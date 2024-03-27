@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Learning more about Brian</title>
+    <title>Learning more about {{  }}</title>
 </head>
 <body>
     <p>A link to the <a href="/hello">Hello Page</a>.</p>
@@ -42,6 +42,10 @@
 
     <h2>Here are some EDM festivals I have been to!</h2>
     <ul>
+        {%for each_course in courses %}
+            <li>{{ edm_festivals }}</li>
+        {%end for %}
+
         <li>Moonrise (Baltimore, MD)</li>
         <li>EDC Orlando (Orlando, FL)</li>
         <li>Electric Zoo (Randel's Park, NY)</li>
